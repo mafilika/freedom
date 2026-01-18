@@ -14,7 +14,29 @@ header nav ul li a {color:#fff; font-weight:bold; transition:0.3s;}
 header nav ul li a:hover {color:#ff7f50;}
 
 /* Hero */
-.hero {background:#ff7f50; color:#fff; text-align:center; padding:100px 20px;}
+.hero {
+    background: url('https://images.ctfassets.net/09muo917z9ra/49WFAosNI00v2JtrK4sOEh/4ac5a125d330fafbd935d45b8294400e/file_00000000e02871f58c52a1b69e33d1d0.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+/* Optional: add overlay for better text readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(27, 31, 59, 0.6); /* dark overlay with 60% opacity */
+    z-index: 1;
+}
+
+/* Hero content should be above overlay */
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
 .hero h2 {font-size:36px; margin-bottom:20px;}
 .hero p {font-size:18px; margin-bottom:30px;}
 .btn-primary {background:#1b1f3b; color:#fff; padding:12px 30px; border:none; cursor:pointer; font-weight:bold; transition:0.3s;}
